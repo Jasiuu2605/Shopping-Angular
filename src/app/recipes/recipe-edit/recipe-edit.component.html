@@ -3,7 +3,13 @@
     <form [formGroup]="recipeForm" (click)="onSubmit()">
       <div class="row">
         <div class="col-xs-12">
-          <button type="submit" class="btn btn-success">Save</button>
+          <button
+            type="submit"
+            class="btn btn-success"
+            [disabled]="!recipeForm.valid"
+          >
+            Save
+          </button>
           <button type="button" class="btn btn-danger">Cancel</button>
         </div>
       </div>
@@ -74,10 +80,16 @@
               <button type="button" class="btn btn-danger">X</button>
             </div>
           </div>
-          <hr>
+          <hr />
           <div class="row">
             <div class="col-xs-12">
-              <button class="btn btn-success" type="button" (click)="onAddIngredient()">Add Ingredient</button>
+              <button
+                class="btn btn-success"
+                type="button"
+                (click)="onAddIngredient()"
+              >
+                Add Ingredient
+              </button>
             </div>
           </div>
         </div>
