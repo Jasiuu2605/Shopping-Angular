@@ -35,7 +35,7 @@
       </div>
       <div class="row">
         <div class="col-xs-12">
-          <img alt="image" class="img-responsive" />
+          <!-- <img alt="image" class="img-responsive" /> -->
         </div>
       </div>
       <div class="row">
@@ -58,6 +58,7 @@
             class="row"
             *ngFor="let ingredientCtrl of controls; let i = index"
             [formGroupName]="i"
+            style="margin-top: 10px"
           >
             <div class="col-xs-8">
               <input type="text" class="form-control" formControlName="name" />
@@ -71,6 +72,12 @@
             </div>
             <div class="col-xs-2">
               <button type="button" class="btn btn-danger">X</button>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-xs-12">
+              <button class="btn btn-success" type="button" (click)="onAddIngredient()">Add Ingredient</button>
             </div>
           </div>
         </div>
